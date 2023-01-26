@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/eyegazecore"]
+	path = Assets/Plugins/eyegazecore
+	url = https://github.com/sunandmoonstudios/unity-eyegazecore
