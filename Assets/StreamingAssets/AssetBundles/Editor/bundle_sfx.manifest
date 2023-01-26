@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 353789449
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 62adc346d7c460906e1c00f1e134aeaf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Game Start_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2C_Impact 2_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Break (short)_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game__Lap 2__v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2W_High Speed Impact 3_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Herzog Engine_v.2.wav
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Box Rattle_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2C_Impact 1_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Blue Boxes Appear_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Click Select_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Countdown (no pause)_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Wall Grinding_v.1 (loop).wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Gazelle Engine_v.2.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Boost_Accelerate_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Start_Go_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2W_High Speed Impact 1_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Countdown_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2W_Low Speed Impact 2_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Break (long)_v.1.wav
+- Assets/Audio/SFX/orb_collect.mp3
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Ground Impact_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game__Final Lap__v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_Cloud X Engine_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2W_Low Speed Impact 1_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2W_High Speed Impact 2_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_Menu_Options_Levels Appear_v.1.wav
+- Assets/Audio/SFX/Eyedrive_SFX_In Game_C2C_Impact 3_v.1.wav
+Dependencies: []

@@ -1,0 +1,1 @@
+﻿public enum PlayType { Tour, Practice, OrbChase, Open}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fac7fc8f631e84cbd6fd90ef79af86, type: 3}
+  m_Name: Space
+  m_EditorClassIdentifier: 
+  tracks:
+  - {fileID: 4624953866205848968, guid: 0d17b8e39e25fb644b8ba54f86155132, type: 3}
+  - {fileID: 2807819163952257764, guid: df8c518aeef1bbf4ba518a81ecd05efe, type: 3}
+  - {fileID: 342536301863413219, guid: 95045f9a114648a45a4e27fd6243de10, type: 3}
+  thumbs:
+  - {fileID: 21300000, guid: 08cf7bd8211208946b720d84c0a361c1, type: 3}
+  - {fileID: 21300000, guid: 2842e4e98b201cb4ea424620766c12ba, type: 3}
+  - {fileID: 21300000, guid: 58b8d1c70d9bf09499c4ee4340708687, type: 3}
+  skybox: {fileID: 2100000, guid: fc8c8e09e7dd1064088c05b9fb27af1c, type: 2}
+  lights: {fileID: 8119504381890354404, guid: 0532a3731e880f44ea1606c68eac0fd2, type: 3}
+  cubemap: {fileID: 8900000, guid: 51244815891995640a60e3fa5a8b1096, type: 2}
+  screenshot: {fileID: 21300000, guid: 8b19cbaab09bf487c8e5b6bdeb280d38, type: 3}

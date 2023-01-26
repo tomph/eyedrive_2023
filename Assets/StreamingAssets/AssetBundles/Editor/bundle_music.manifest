@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 805325382
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 66b2989f8673ed46d9a6b0a24375ff60
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Audio/Music/Eyedrive_Music_La Cuna_Demo Loop_v.1.wav
+- Assets/Audio/Music/Eyedrive_Music_Title_Menu_v.1.wav
+- Assets/Audio/Music/Eyedrive_Music_Sol Base_Demo Loop_v.1.wav
+- Assets/Audio/Music/Eyedrive_Music_Dorian IV_Demo Loop_v.1.wav
+Dependencies: []

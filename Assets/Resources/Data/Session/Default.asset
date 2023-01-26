@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0b75e87cf9794439033b4211816058, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  user:
+    _id: contactteach
+    username: HumanWolf62
+    onboarded: 1
+    sfxMuted: 0
+    musicMuted: 1
+    musicVolume: 70
+    sfxVolume: 60
+    settings:
+      switchActive: 0
+      eyeGazeActive: 1
+      clickAnim: 1
+      eyeGazeConfig:
+        hideMouseCursor: 0
+        dwellTime: 1.1
+        anim: pie
+        dwellClickActive: 1
+        directMode: 1
+        allowRepeat: 1
+      switchConfig:
+        autoStartScanning: 0
+        scanTime: 0.6
+        switchMode: 2
+        rowSelectorMode: 0
+        directMode: 0
+        switch1KeyCode: 32
+        switch2KeyCode: 13
+        debounceTimeout: 300
+        switchAutoKeyTimeout: 500
+    lang: gb
+  world: 0
+  gameType: 0
+  playType: 0
+  state: 1
+  ship: 0
+  track: 0
+  bestTime: 0
+  lapTime: 40.140728
+  lap: 1
+  orbs: 0
+  totalOrbs: 0
+  lapTimes: []

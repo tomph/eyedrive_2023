@@ -1,0 +1,1 @@
+﻿public enum GameType { TimeTrial, Collect}

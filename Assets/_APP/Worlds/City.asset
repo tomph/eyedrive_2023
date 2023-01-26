@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fac7fc8f631e84cbd6fd90ef79af86, type: 3}
+  m_Name: City
+  m_EditorClassIdentifier: 
+  tracks:
+  - {fileID: 4318563984639957738, guid: fce529359ff40c443b5e38c8e242199a, type: 3}
+  - {fileID: 6609308099350699310, guid: 7148b3e246eaf4044bd320045246c670, type: 3}
+  - {fileID: 6954306732990819707, guid: 2fbf9fcc8976ea045900aeef5b579ee1, type: 3}
+  thumbs:
+  - {fileID: 21300000, guid: 2327d12dc1e1cd148bc73f4447739996, type: 3}
+  - {fileID: 21300000, guid: ab7be7a9db599a34caab3796e8479157, type: 3}
+  - {fileID: 21300000, guid: 6c45e878f2af1964c80f9790798e16a8, type: 3}
+  skybox: {fileID: 2100000, guid: 30321e40b99c65f4a956c64bd330efee, type: 2}
+  lights: {fileID: 3408529696428580499, guid: 3080b001d0cbab845babe6470169c376, type: 3}
+  cubemap: {fileID: 8900000, guid: 693b9dafc4390f14781a168a07ad3482, type: 2}
+  screenshot: {fileID: 21300000, guid: 7a6e5977de1d04c9bb0df64c9fb59e72, type: 3}

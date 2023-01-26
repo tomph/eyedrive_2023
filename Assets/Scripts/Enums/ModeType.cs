@@ -1,0 +1,1 @@
+﻿public enum ModeType {Precise, Lanes, Gamepad, Mouse}

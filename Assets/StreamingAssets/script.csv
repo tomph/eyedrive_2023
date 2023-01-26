@@ -1,0 +1,18 @@
+Key,gb,fr,es,de,it,pt
+colorselect_player_1,Player 1,Joueur 1,Jugador 1,Spieler 1,Giocatore 1,Jogador 1
+colorselect_player_2,Player 2,Joueur 2,Jugador 2,Spieler 2,Giocatore 2,Jogador 2
+colorselect_desc,Choose your colour,Choisissez votre couleur,Elige tu color,Wähle deine Farbe,Scegli il tuo colore,Escolhe a tua cor
+game_welldone_0,Well Done,Bien joué,Bien hecho,Gut Gemacht,Ben fatto,Muito bem
+game_welldone_1,Incredible,Incroyable,Increíble,Hervorragend,Incredibile,Incrível
+game_welldone_2,Epic,Épique,Épico,Episch,Epico,Épico
+game_welldone_3,Nice One,Joli,Buen tiro,Netter Versuch,Ottimo,Boa
+game_welldone_4,Sweet,Top,Qué bonito,Klasse,Complimenti,Fantástico
+game_welldone_5,Amazing,Hallucinant,Fantástico,Großartig,Meraviglioso,Espetacular
+game_quit_warning,Return to level select?,Retourner au niveau sélectionné ?,Volver a la selección de nivel?,Zurück zur Level-Auswahl?,Ritorna alla selezione del livello?,Regressar à seleção de nível?
+game_continue_warning,Would you like to continue?,Voulez-vous continuer?,Te gustaría continuar?,Möchtest du fortfahren?,Desideri continuare?,Queres continuar?
+multiplayer_course_header,Choose a course,Choisir un parcours,Elije un campo,Wähle einen Golfplatz aus,Scegli un percorso,Escolher um campo
+multiplayer_holes_welcome,Welcome,Bienvenue,Bienvenido/a,Willkommen,Benvenuto,Bem-vindo
+multiplayer_login_header,Player 2 login,Connexion du joueur 2,Volver a la selección de nivel?,Login Spieler 2,Login giocatore 2,Início de sessão do jogador 2
+multiplayer_login_secret,Enter secret word,Saisir le mot secret,Introduce la palabra secreta,Gib das Geheimwort ein,Inserisci la parola segreta,Introduz a palavra secreta
+game_winner,Winner,Gagnant,Ganador,Gewinner,Vincitore,Vencedor
+game_draw,Draw,Faire un draw,Golpe Draw,Unentschieden,Pareggio,Empate

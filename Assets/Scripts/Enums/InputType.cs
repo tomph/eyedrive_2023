@@ -1,0 +1,1 @@
+﻿public enum InputType {Gaze, Keys}
