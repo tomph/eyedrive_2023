@@ -382,7 +382,7 @@ public class MenuController : AbstractScene
                     break;
                 case MenuState.NextTrack:
                 {
-                    NextTrackSetter.SetNextTrack(_session, game);
+                    //NextTrackSetter.SetNextTrack(_session, game);
 
                     Debug.Log("set settings next track" + _session.world + " " +
                               _session.track);
@@ -502,5 +502,10 @@ public class MenuController : AbstractScene
     protected override UITransition BuildTransitionOut()
     {
         return FadeToWhiteTransition();
+    }
+
+    protected override void OnTick(float delta)
+    {
+        
     }
 }

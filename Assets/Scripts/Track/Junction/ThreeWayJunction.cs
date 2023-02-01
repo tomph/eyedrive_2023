@@ -53,6 +53,7 @@ public class JunctionAddress
     }
 }
 
+[Serializable]
 public class JunctionAddressEvent : UnityEvent<JunctionAddress>
 {
     

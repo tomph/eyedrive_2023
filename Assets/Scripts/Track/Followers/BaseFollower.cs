@@ -84,6 +84,11 @@ public abstract class BaseFollower : SplineFollower
         
     }
 
+    public void OnJunctionEntered()
+    {
+        
+    }
+
     public void Tick(float delta)
     {
         CalculateHover();
@@ -115,15 +120,7 @@ public abstract class BaseFollower : SplineFollower
 
     public void Init(double percent)
     {
-        ThreeWayJunction[] junctions = computer.GetComponentsInChildren<ThreeWayJunction>();
-        foreach (ThreeWayJunction j in junctions)
-        {
-            j.ON_JUNCTION_TRIGGERED.RemoveAllListeners();
-            j.ON_JUNCTION_TRIGGERED.AddListener(this.OnJunctionEntered);
-            
-            j.ON_JUNCTION_EXIT.RemoveAllListeners();
-            j.ON_JUNCTION_EXIT.AddListener(this.OnJunctionExited);
-        }
+
 
         SetPercent(percent);
         _lastpercent = result.percent;
@@ -135,31 +132,7 @@ public abstract class BaseFollower : SplineFollower
           OnInit(percent);
     }
 
-    private void OnJunctionExited()
-    {
-        _inJunction = false;
-    }
 
-    private void OnJunctionEntered(JunctionAddress junctionAddress)
-    {
-        Debug.Log("OnJunctionEntered: " + junctionAddress.direction + " / " + intention);
-        
-        if(junctionAddress.direction == intention)
-        {
-            //Clear
-            if (address.elements.Length > 1) ExitAddress(1);
-
-            //Assign Route
-            EnterAddress(junctionAddress.node, junctionAddress.index);
-
-            //Assign Exit
-            EnterAddress(junctionAddress.exit, 0);
-        }
-
-        ON_JUNCTION.Dispatch();
-        
-        _inJunction = true;
-    }
 
 
     private void OnTriggerExit(Collider other)
@@ -181,9 +154,6 @@ public abstract class BaseFollower : SplineFollower
         CollapseAddress();
     }
     
-
-   
-
     void CalculateHover()
     {
         //This variable will hold the "normal" of the ground. Think of it as a line
@@ -275,11 +245,10 @@ public abstract class BaseFollower : SplineFollower
         }
     }
 
-    protected Intention intention
+    public Intention intention
     {
         set
         {
-            Debug.Log("set intention: " + value);
             _intention = value;
         }
 

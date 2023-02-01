@@ -1,4 +1,5 @@
-﻿using Dreamteck.Splines;
+﻿using System;
+using Dreamteck.Splines;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,6 +27,11 @@ public class JunctionGate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("OnTriggerEnter1 " + (other == null));
+        Debug.Log("OnTriggerEnter2 " + (other.gameObject == null));
+        Debug.Log("OnTriggerEnter3 " + (ON_ENTERED == null));
+        Debug.Log("OnTriggerEnter4 " + (info == null));
+        Debug.Log("OnTriggerEnter4 " + (other.gameObject.GetComponent<BaseFollower>() == null));
         if(other.gameObject.GetComponent<BaseFollower>() != null)
         {
             ON_ENTERED.Invoke(info);
@@ -56,7 +62,9 @@ public class GateInfo
 }
 
 
+[Serializable]
 public class GateInfoEvent : UnityEvent<GateInfo>
 {
+    
 }
 

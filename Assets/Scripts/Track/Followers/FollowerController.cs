@@ -74,8 +74,8 @@ public class FollowerController : MonoBehaviour
         
         s.ON_LAP_COMPLETE.AddListener(OnLapComplete);
         s.Initialise(_computer, _input, Constants.SPLINE_START_PERCENT);
-        
-        return _ships[ship];
+
+        return s;
     }
 
     private void OnLapComplete()

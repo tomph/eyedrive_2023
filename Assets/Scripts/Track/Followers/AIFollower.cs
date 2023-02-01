@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class AIFollower : BaseFollowerAI
 {
-    public float ACCELERATION = 10f;
-    public float DEACCELERATION = 10f;
+
     public float SPEED = 100f;
-    public float MAX_OFFSET_X = 4.5f;
-    public float TURN_SPEED = 1f;
-    public float MAX_TURN = 40f;
+
     public float MAX_ROLL = 20f;
-    public float ROLL_SPEED = 6;
-    public float TRACK_BOUNDS = 9;
-    public float BOUNDS_FORCE = 30;
-    public float RAMP_BOOST = 1.14f;
+
 
     public float SLERP_TIME = 2.5f;
 
@@ -22,9 +16,7 @@ public class AIFollower : BaseFollowerAI
     public float LANE_CHANGE_SPEED = 40;
 
     private Vector3 _laneMovement = Vector3.zero;
-
-    private Vector2 _offset = new Vector2(0, 1.4f);
-
+    
     private float _turn = 0;
     private float _roll = 0;
 
@@ -36,10 +28,7 @@ public class AIFollower : BaseFollowerAI
     private float _laneChangeSeed = 1;
 
     private SplineResult _cResult;
-
-    //[SerializeField]
-    //private GameObject _trails;
-
+    
     public override void OnAwake()
     {
         _body = GetComponent<Rigidbody>();
@@ -53,24 +42,8 @@ public class AIFollower : BaseFollowerAI
         _lastpercent = percent;
         _body.transform.position = result.position;
     }
-
-    private void UpdateBounds(SplineResult r)
-    {
-        Vector3 dist = r.position - _body.position;
-        float mag = dist.magnitude;
-        Vector3 direction = dist / mag;
-
-        if (mag > TRACK_BOUNDS * .9f)
-        {
-            _body.AddForce(direction * mag * BOUNDS_FORCE, ForceMode.Force);
-        }
-    }
-
-    private void UpdateInput()
-    {
-
-    }
-
+    
+    
     void UpdateResult()
     {
         float clamped = Mathf.Repeat((float)_lastpercent + 0.005f, 1);

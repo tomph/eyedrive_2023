@@ -11,10 +11,23 @@ public class Ship : MonoBehaviour
    private GamepadFollower _gamepad;
    private BaseFollower _active;
 
+   private SplineTracer _tracer;
+   private bool _inJunction;
+
    public UnityEvent ON_LAP_COMPLETE = new UnityEvent();
 
    public Ship Initialise(SplineComputer computer, InputManager input,  double percent)
    {
+      _tracer = GetComponent<SplineTracer>();
+      
+      //break this out into a new component?
+      ThreeWayJunction[] junctions = computer.GetComponentsInChildren<ThreeWayJunction>();
+      foreach (ThreeWayJunction j in junctions)
+      {
+         j.ON_JUNCTION_TRIGGERED.AddListener(OnJunctionEntered);
+         j.ON_JUNCTION_EXIT.AddListener(OnJunctionExited);
+      }
+      
       if (_precise == null)
       {
          _precise = GetComponent<PreciseFollower>();
@@ -39,7 +52,34 @@ public class Ship : MonoBehaviour
          _gamepad.Init(percent, input);
       }
       
+
       return this;
+   }
+   
+   private void OnJunctionExited()
+   {
+      _inJunction = false;
+   }
+
+   private void OnJunctionEntered(JunctionAddress junctionAddress)
+   {
+      Debug.Log("OnJunctionEntered: " + junctionAddress.direction + " / " + _active.intention);
+        
+      if(junctionAddress.direction == _active.intention)
+      {
+         //Clear
+         if (_tracer.address.elements.Length > 1) _tracer.ExitAddress(1);
+
+         //Assign Route
+         _tracer.EnterAddress(junctionAddress.node, junctionAddress.index);
+
+         //Assign Exit
+         _tracer.EnterAddress(junctionAddress.exit, 0);
+      }
+
+      _active.OnJunctionEntered();
+        
+      _inJunction = true;
    }
 
    public void Tick(float delta, ModeType mode)
@@ -80,7 +120,7 @@ public class Ship : MonoBehaviour
          _lanes.ON_LAP_COMPLETE.RemoveAll();
          _lanes.ON_LAP_COMPLETE.Add(ON_LAP_COMPLETE.Invoke);
       }
-      else if(mode == ModeType.Precise)
+      else if(mode == ModeType.Precise || mode == ModeType.Mouse)
       {
          _active = _precise;
          _precise.Init(percent);

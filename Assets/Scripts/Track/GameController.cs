@@ -132,7 +132,22 @@ public class GameController : AbstractScene, IAccessUpdatable
 
     private void OnNext()
     {
-        NextTrackSetter.SetNextTrack(_session, game);
+        if (_session.track < 2)
+            _session.track++;
+        else
+        {
+            int w = (int)_session.world;
+            if (w < 2)
+            {
+                _session.world++;
+                _session.track = 0;
+            }
+            else
+            {
+                //whats next?
+            }
+        }
+
         OnReplay();
     }
 
@@ -398,6 +413,11 @@ public class GameController : AbstractScene, IAccessUpdatable
     public void OnUpdate(AccessVO data)
     {
         _follower.OnModeChange(mode);
+    }
+
+    protected override void OnTick(float delta)
+    {
+       
     }
 }
 

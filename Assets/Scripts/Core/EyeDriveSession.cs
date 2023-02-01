@@ -8,6 +8,7 @@ using Sirenix.OdinInspector;
 public class EyeDriveSession : ScriptableObject, ISession
 {
     public UserVO user;
+    private GameVO _game;
 
   
     public World world;
@@ -48,17 +49,22 @@ public class EyeDriveSession : ScriptableObject, ISession
         orbs = 0;
         lap = 0;
         totalOrbs = 0;
-        
-            //set these via appropriate menus
-        //world = World.Space;
-        //gameType = GameType.TimeTrial;
-        //playType = PlayType.Open;
+        world = World.Space;
+        track = 0;
         
         state = GameState.Countdown;
         bestTime = 0;
     }
 
-   
+    public GameVO GetGame()
+    {
+        return _game;
+    }
+
+    public void SetGame(GameVO data)
+    {
+        _game = data;
+    }
 }
 
 public class StaticEyeDriveSession

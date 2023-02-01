@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyegazeCore;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,13 +8,13 @@ using UnityEngine.UI;
 public class RaceCompletePanelController : MonoBehaviour
 {
     [SerializeField]
-    private Button _homeButton;
+    private StandardAccessibleButton _homeButton;
 
     [SerializeField]
-    private Button _nextButton;
+    private StandardAccessibleButton _nextButton;
 
     [SerializeField]
-    private Button _replayButton;
+    private StandardAccessibleButton _replayButton;
 
     [SerializeField]
     private RaceCompleteOrbView _orbView;
@@ -33,9 +34,9 @@ public class RaceCompletePanelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _homeButton.onClick.AddListener(OnHome);
-        _nextButton.onClick.AddListener(OnNext);
-        _replayButton.onClick.AddListener(OnReplay);
+        _homeButton.ON_ANIMATED_ACTION.AddListener(OnHome);
+        _replayButton.ON_ANIMATED_ACTION.AddListener(OnReplay);
+        _nextButton.ON_ANIMATED_ACTION.AddListener(OnNext);
 
         gameObject.SetActive(false);
     }
@@ -49,6 +50,12 @@ public class RaceCompletePanelController : MonoBehaviour
 
         _timeView.Show();
         _timeView.Draw(times);
+
+        EyeDriveSession sesh = StaticEyeDriveSession.INSTANCE;
+        if ((int)sesh.world == 2 && sesh.track == 2)
+            _nextButton.interactable = false;
+        else
+            _nextButton.interactable = true;
     }
 
     private void UpdateHeader()

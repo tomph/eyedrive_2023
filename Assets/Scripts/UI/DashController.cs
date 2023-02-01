@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using EyegazeCore;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -31,22 +29,21 @@ public class DashController : CanvasMonoBehaviour, IAccessUpdatable
         
         _orbDisplay.alpha = 0;
 
-        _orbCounter = _orbDisplay.GetComponentInChildren<Text>();
-        _orbAnimator = _orbDisplay.GetComponent<Animator>();
-        
     }
 
     public void OnOrbCollected()
     {
-        _orbAnimator.Play("OrbCollect");
+        orbAnimator.Play("OrbCollect");
     }
 
     public void Tick(float delta, int lap, ModeType mode)
     {
         _orbDisplay.alpha = (StaticEyeDriveSession.INSTANCE.gameType == GameType.Collect && StaticEyeDriveSession.INSTANCE.lap > -1) ? 1 : 0;
         
-        _lapTimeView.gameObject.SetActive(lap > 0);
-        _lapTimeView.Tick(delta);
+        _lapTimeView.gameObject.SetActive(lap > 0 && (StaticEyeDriveSession.INSTANCE.gameType == GameType.TimeTrial));
+        
+        if(_lapTimeView.gameObject.activeSelf)
+            _lapTimeView.Tick(delta);
         
         _pauseButton.gameObject.SetActive(mode != ModeType.Gamepad);
         _classicPreciseToggle.gameObject.SetActive(mode != ModeType.Gamepad && mode != ModeType.Mouse);
@@ -57,11 +54,11 @@ public class DashController : CanvasMonoBehaviour, IAccessUpdatable
         {
             if(StaticEyeDriveSession.INSTANCE.totalOrbs == StaticEyeDriveSession.INSTANCE.orbs)
             {
-                _orbCounter.text = "<color=#FC00FF>All Orbs Collected!</color>";
+                orbCounter.text = "<color=#FC00FF>All Orbs Collected!</color>";
             }
             else
             {
-                _orbCounter.text =  StaticEyeDriveSession.INSTANCE.orbs.ToString() + " / " + StaticEyeDriveSession.INSTANCE.totalOrbs.ToString() + "<size=30><color=#fc00ff> Orbs</color></size>";
+                orbCounter.text =  StaticEyeDriveSession.INSTANCE.orbs.ToString() + " / " + StaticEyeDriveSession.INSTANCE.totalOrbs.ToString() + "<size=30><color=#fc00ff> Orbs</color></size>";
             }
         }
     }
@@ -97,11 +94,27 @@ public class DashController : CanvasMonoBehaviour, IAccessUpdatable
         }
     }
 
-    public bool controllerConnected
+
+    public Text orbCounter
     {
-        set
+        get
         {
-           
+            if(_orbCounter == null)
+                _orbCounter = _orbDisplay.GetComponentInChildren<Text>();
+
+            return _orbCounter;
+        }
+    }
+
+    public Animator orbAnimator
+    {
+        get
+        {
+
+            if(_orbAnimator == null)
+                _orbAnimator = _orbDisplay.GetComponent<Animator>();
+
+            return _orbAnimator;
         }
     }
 }

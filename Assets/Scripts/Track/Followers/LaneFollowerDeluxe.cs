@@ -57,8 +57,6 @@ public class LaneFollowerDeluxe : BaseFollower
 
     public override void OnAwake()
     {
-        ON_JUNCTION.Add(OnJunction);
-        
         _body = GetComponent<Rigidbody>();
 
         _laneControlInput.ON_CHOOSE_DIR.Add(OnChooseDir);
@@ -123,7 +121,7 @@ public class LaneFollowerDeluxe : BaseFollower
         _cResult = address.Evaluate(percent);
     }
     
-    public void OnJunction()
+    public void OnJunctionEntered()
     {
         _lane = 0;
     }
